@@ -149,7 +149,12 @@ database/
    ```
    # Dans le fichier .env
    DB_CONNECTION=sqlite
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
    DB_DATABASE=/chemin/absolu/vers/database/db.sqlite
+   DB_USERNAME=
+   DB_PASSWORD=
+
    ```
 
 5. **Créer le lien de stockage**
