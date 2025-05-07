@@ -1,0 +1,101 @@
+    .courses-container {
+        max-width: 1200px;
+        margin: 60px auto;
+        padding: 0 20px;
+    }
+
+    .title-section {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .title-section h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--text-color, #2c3e50);
+        position: relative;
+        display: inline-block;
+        padding-bottom: 12px;
+    }
+
+    .title-section h1::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px;
+        height: 4px;
+        background: linear-gradient(90deg, #4e73df 0%, #6f42c1 100%);
+        border-radius: 4px;
+    }
+
+    .btn-add-course {
+        background: linear-gradient(135deg, #00c9a7, #3cba92);
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        font-weight: 600;
+        border-radius: 12px;
+        box-shadow: 0 6px 16px rgba(0, 201, 167, 0.25);
+        transition: all 0.3s ease;
+    }
+
+    .btn-add-course:hover {
+        transform: translateY(-2px);
+        background: linear-gradient(135deg, #00b395, #36a582);
+    }
+
+    .course-card {
+        background-color: var(--form-bg, #fff);
+        border-radius: 16px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+        padding: 25px 30px;
+        margin-bottom: 20px;
+        transition: all 0.2s ease;
+    }
+
+    .course-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .course-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--text-color, #2c3e50);
+    }
+
+    .course-details {
+        margin-top: 10px;
+        color: #666;
+    }
+
+    .course-details span {
+        display: inline-block;
+        margin-right: 15px;
+        font-weight: 500;
+    }
+
+    .card-actions {
+        margin-top: 20px;
+        display: flex;
+        gap: 10px;
+    }
+
+    .card-actions .btn {
+        border-radius: 10px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        padding: 8px 14px;
+    }
+
+    .pagination-custom {
+        margin-top: 30px;
+    }
+
+    .alert {
+        border-radius: 12px;
+        padding: 16px;
+        font-weight: 500;
+    }

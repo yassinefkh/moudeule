@@ -1,0 +1,82 @@
+    .edit-course-container {
+        max-width: 700px;
+        margin: 60px auto;
+        padding: 0 20px;
+    }
+
+    .form-card {
+        background-color: var(--form-bg, #fff);
+        padding: 40px 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    }
+
+    .form-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 30px;
+        text-align: center;
+        color: var(--text-color, #2c3e50);
+    }
+
+    .form-label {
+        font-weight: 600;
+        margin-bottom: 6px;
+        color: var(--text-color, #333);
+    }
+
+    .form-control,
+    .form-select {
+        border-radius: 12px;
+        padding: 12px 16px;
+        font-size: 1rem;
+        background-color: var(--input-bg, #fff);
+        color: var(--input-color, #000);
+        border: 1px solid var(--input-border, #ccc);
+        transition: all 0.2s ease;
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+        outline: none;
+        border-color: var(--input-focus, #00b894);
+        box-shadow: 0 0 0 3px rgba(0, 184, 148, 0.2);
+    }
+
+    .btn-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg, #00c9a7, #3cba92);
+        border: none;
+        color: #fff;
+        font-weight: 600;
+        padding: 10px 22px;
+        border-radius: 10px;
+    }
+
+    .btn-primary:hover {
+        background: linear-gradient(135deg, #00b395, #2fa387);
+    }
+
+    .btn-secondary {
+        background-color: #eee;
+        border: none;
+        color: #333;
+        font-weight: 600;
+        padding: 10px 22px;
+        border-radius: 10px;
+    }
+
+    .btn-secondary:hover {
+        background-color: #ddd;
+    }
+
+    .invalid-feedback {
+        font-size: 0.9rem;
+        color: #e74a3b;
+    }

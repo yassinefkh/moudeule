@@ -1,0 +1,127 @@
+    .discussion-container {
+        max-width: 900px;
+        margin: 60px auto;
+        padding: 0 20px;
+    }
+
+    .thread-card {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 16px;
+        padding: 40px;
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
+        margin-bottom: 30px;
+        color: #222;
+        transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    body.dark-mode-active .thread-card {
+        background: rgba(20, 20, 20, 0.85);
+        color: #eee;
+    }
+
+    .thread-title {
+        font-size: 2.2rem;
+        font-weight: 800;
+        margin-bottom: 10px;
+    }
+
+    .thread-meta {
+        color: #6c757d;
+        font-size: 0.9rem;
+    }
+
+    body.dark-mode-active .thread-meta {
+        color: #aaa;
+    }
+
+    .thread-content {
+        margin-top: 20px;
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    .comment-thread {
+        margin-top: 40px;
+    }
+
+    .comment-block {
+        border-left: 3px solid #00b894;
+        margin-left: calc(20px * var(--depth));
+        padding: 15px 20px;
+        margin-bottom: 15px;
+        background: rgba(248, 249, 250, 0.8);
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        color: #222;
+    }
+
+    body.dark-mode-active .comment-block {
+        background: rgba(30, 30, 30, 0.85);
+        color: #eee;
+    }
+
+    .comment-header {
+        font-weight: 700;
+        font-size: 1rem;
+        color: #4e73df;
+    }
+
+    .comment-date {
+        font-size: 0.8rem;
+        color: #888;
+    }
+
+    body.dark-mode-active .comment-date {
+        color: #bbb;
+    }
+
+    .comment-body {
+        margin-top: 10px;
+        line-height: 1.5;
+    }
+
+    .comment-actions {
+        margin-top: 10px;
+    }
+
+    .comment-actions button {
+        background: none;
+        border: none;
+        color: #00b894;
+        font-size: 0.85rem;
+        cursor: pointer;
+    }
+
+    .reply-form {
+        margin-top: 10px;
+    }
+
+    .reply-form input {
+        border-radius: 10px;
+        height: 42px;
+    }
+
+    .reply-form button {
+        margin-top: 8px;
+    }
+
+    .add-comment-box {
+        background: #fff;
+        padding: 25px;
+        border-radius: 16px;
+        margin-top: 60px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    }
+
+    body.dark-mode-active .add-comment-box {
+        background: #1b1b1b;
+    }
+
+    h4 {
+        color: #1e1e2f;
+        transition: color 0.3s ease;
+    }
+
+    body.dark-mode-active h4 {
+        color: #f1f1f1;
+    }

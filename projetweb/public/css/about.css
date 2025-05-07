@@ -1,0 +1,648 @@
+/* about.css - Style pour la page À propos du projet universitaire */
+:root {
+    --primary-color: #4361ee;
+    --primary-light: rgba(67, 97, 238, 0.1);
+    --secondary-color: #3a0ca3;
+    --accent-color: #4cc9f0;
+    --success-color: #2ecc71;
+    --warning-color: #f39c12;
+    --danger-color: #e74c3c;
+    --text-primary: #1a1a2e;
+    --text-secondary: #4a4a68;
+    --text-tertiary: #9999a8;
+    --background-color: #f7f7fa;
+    --card-bg: #ffffff;
+    --card-border: rgba(0, 0, 0, 0.05);
+    --box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    --border-radius: 16px;
+    --transition-speed: 0.25s;
+}
+
+/* Dark mode variables */
+[data-bs-theme="dark"] {
+    --primary-color: #4cc9f0;
+    --primary-light: rgba(76, 201, 240, 0.1);
+    --text-primary: #e5e5e5;
+    --text-secondary: #b0b0c0;
+    --text-tertiary: #6e6e8a;
+    --background-color: #121212;
+    --card-bg: #1e1e24;
+    --card-border: rgba(255, 255, 255, 0.08);
+    --box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+    color: var(--text-primary);
+}
+
+/* Header section */
+.about-header {
+    text-align: center;
+    padding: 70px 20px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.about-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-light), rgba(76, 201, 240, 0.1));
+    z-index: -1;
+    border-radius: 0 0 50% 50% / 20%;
+}
+
+.about-header h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Section styling */
+.about-authors,
+.about-project,
+.about-features,
+.about-challenges,
+.about-tech,
+.about-learning,
+.project-evaluation {
+    margin-bottom: 60px;
+}
+
+.about-project h2,
+.about-features h2,
+.about-challenges h2,
+.about-tech h2,
+.about-learning h2,
+.project-evaluation h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.about-project h2::after,
+.about-features h2::after,
+.about-challenges h2::after,
+.about-tech h2::after,
+.about-learning h2::after,
+.project-evaluation h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+    border-radius: 2px;
+}
+
+/* Authors section */
+.authors-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+    border: 1px solid var(--card-border);
+    text-align: center;
+}
+
+.authors-card h2 {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 1.8rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.authors-card h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+    border-radius: 2px;
+}
+
+.authors-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+}
+
+.author-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 15px;
+}
+
+.author-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.author-info p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-align: left;
+}
+
+.professor {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--card-border);
+}
+
+.professor h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.professor p {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.professor-title {
+    font-size: 0.9rem !important;
+    color: var(--text-secondary);
+    margin-top: 5px !important;
+}
+
+/* Project description */
+.project-description {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+    border: 1px solid var(--card-border);
+}
+
+.project-description p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.project-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    padding-left: 0;
+    list-style: none;
+}
+
+.project-highlights li {
+    position: relative;
+    padding-left: 30px;
+    font-size: 1.05rem;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+.project-highlights li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Features grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--card-border);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    height: 70px;
+    width: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    background-color: var(--primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.feature-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Challenges container */
+.challenges-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.challenge-item {
+    display: flex;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--card-border);
+    transition: transform 0.2s;
+}
+
+.challenge-item:hover {
+    transform: translateX(5px);
+}
+
+.challenge-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-right: 25px;
+    flex-shrink: 0;
+}
+
+.challenge-content h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.challenge-content p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Tech grid */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.tech-category {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--card-border);
+}
+
+.tech-category h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-light);
+    color: var(--text-primary);
+}
+
+.tech-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tech-list li {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+}
+
+.tech-list i {
+    margin-right: 10px;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+/* Learning section */
+.learning-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.learning-item {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--card-border);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.learning-item:hover {
+    transform: translateY(-5px);
+}
+
+.learning-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    height: 70px;
+    width: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    background-color: var(--primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.learning-item h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.learning-item p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Evaluation section */
+.evaluation-content {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--card-border);
+}
+
+.evaluation-content > p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: var(--text-secondary);
+}
+
+.strengths-improvements {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.strengths h3,
+.improvements h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-light);
+}
+
+.strengths ul,
+.improvements ul {
+    padding-left: 20px;
+}
+
+.strengths li,
+.improvements li {
+    margin-bottom: 10px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.strengths h3,
+.strengths li::marker {
+    color: var(--success-color);
+}
+
+.improvements h3,
+.improvements li::marker {
+    color: var(--accent-color);
+}
+
+/* Summary section */
+.about-summary {
+    margin-top: 50px;
+}
+
+.summary-card {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: var(--border-radius);
+    padding: 40px;
+    color: white;
+    box-shadow: 0 15px 30px rgba(58, 12, 163, 0.3);
+    text-align: center;
+}
+
+.summary-card h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.summary-card p {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 15px;
+}
+
+.signature {
+    font-size: 1.4rem;
+    font-family: 'Brush Script MT', cursive;
+    margin-top: 30px;
+}
+
+.date {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .about-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .features-grid,
+    .learning-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .strengths-improvements {
+        grid-template-columns: 1fr;
+    }
+
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .authors-list {
+        flex-direction: column;
+    }
+    
+    .author {
+        margin-bottom: 20px;
+    }
+    
+    .challenge-item {
+        flex-direction: column;
+    }
+    
+    .challenge-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .summary-card {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-header {
+        padding: 50px 20px;
+    }
+    
+    .about-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .project-highlights {
+        grid-template-columns: 1fr;
+    }
+    
+    .feature-card,
+    .tech-category,
+    .learning-item {
+        padding: 20px;
+    }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-header,
+.about-authors,
+.about-project,
+.about-features,
+.about-challenges,
+.about-tech,
+.about-learning,
+.project-evaluation,
+.about-summary {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.about-authors {
+    animation-delay: 0.2s;
+}
+
+.about-project {
+    animation-delay: 0.3s;
+}
+
+.about-features {
+    animation-delay: 0.4s;
+}
+
+.about-challenges {
+    animation-delay: 0.5s;
+}
+
+.about-tech {
+    animation-delay: 0.6s;
+}
+
+.about-learning {
+    animation-delay: 0.7s;
+}
+
+.project-evaluation {
+    animation-delay: 0.8s;
+}
+
+.about-summary {
+    animation-delay: 0.9s;
+}

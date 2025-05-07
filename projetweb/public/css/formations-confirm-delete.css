@@ -1,0 +1,104 @@
+.confirm-delete-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    max-width: 800px;
+    margin: 2rem auto;
+    border: 1px solid var(--border-color);
+}
+
+.confirm-header {
+    background: linear-gradient(to right, rgba(231, 76, 60, 0.05), rgba(231, 76, 60, 0.02));
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(231, 76, 60, 0.2);
+}
+
+.confirm-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 2rem;
+}
+
+.confirm-icon.danger {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: #e74c3c;
+}
+
+.confirm-title {
+    font-size: 1.6rem;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.confirm-body {
+    padding: 2rem;
+}
+
+.confirm-message {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+}
+
+.student-list-container {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    border-radius: var(--border-radius-md);
+    background-color: rgba(0, 0, 0, 0.02);
+    border: 1px solid var(--border-color);
+}
+
+.student-list-container h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.confirmation-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+body.dark-mode-active .confirm-delete-card {
+    background-color: var(--dm-card-bg);
+    border-color: var(--dm-border-color);
+}
+
+body.dark-mode-active .confirm-header {
+    background: linear-gradient(to right, rgba(231, 76, 60, 0.1), rgba(231, 76, 60, 0.05));
+    border-bottom-color: rgba(231, 76, 60, 0.3);
+}
+
+body.dark-mode-active .confirm-title {
+    color: var(--dm-text-primary);
+}
+
+body.dark-mode-active .confirm-message {
+    color: var(--dm-text-secondary);
+}
+
+body.dark-mode-active .student-list-container {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-color: var(--dm-border-color);
+}
+
+body.dark-mode-active .student-list-container h3 {
+    color: var(--dm-text-primary);
+}

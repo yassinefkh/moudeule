@@ -1,0 +1,584 @@
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-primary {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    padding: 0.85rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(var(--primary-rgb), 0.2);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(var(--primary-rgb), 0.25);
+    color: white;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.btn-options {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: none;
+    background-color: rgba(var(--secondary-rgb, 108, 117, 125), 0.1);
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-options:hover {
+    background-color: rgba(var(--secondary-rgb, 108, 117, 125), 0.15);
+    color: var(--text-primary);
+}
+
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    margin-top: 0.5rem;
+    min-width: 180px;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem;
+    z-index: 1000;
+    display: none;
+}
+
+.dropdown-menu.show {
+    display: block;
+    animation: fadeInDown 0.2s ease forwards;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    width: 100%;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(var(--primary-rgb), 0.05);
+    color: var(--text-primary);
+}
+
+.dropdown-item.text-danger {
+    color: var(--danger-color, #dc3545);
+}
+
+.dropdown-item.text-danger:hover {
+    background-color: rgba(var(--danger-rgb, 220, 53, 69), 0.08);
+    color: var(--danger-color, #dc3545);
+}
+
+
+.control-details-card {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(229, 231, 235, 0.5);
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.detail-section {
+    padding: 1.75rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.section-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-label {
+    font-size: 0.85rem;
+    color: var(--text-tertiary);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.detail-value {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.detail-value i {
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.control-description {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.description-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+
+.stats-section {
+    padding: 1.75rem;
+    background-color: rgba(var(--primary-rgb), 0.02);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1.25rem;
+}
+
+.stat-item {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 1.25rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-3px);
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-tertiary);
+    margin-bottom: 0.5rem;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+
+.student-grade-section {
+    padding: 1.75rem;
+    background-color: rgba(var(--success-rgb, 40, 167, 69), 0.05);
+    text-align: center;
+}
+
+.grade-display {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    padding: 1.75rem;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(229, 231, 235, 0.5);
+    min-width: 200px;
+}
+
+.grade-display.passing {
+    border-top: 4px solid var(--success-color, #28a745);
+}
+
+.grade-display.failing {
+    border-top: 4px solid var(--danger-color, #dc3545);
+}
+
+.grade-value {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--success-color, #28a745);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: baseline;
+}
+
+.grade-display.failing .grade-value {
+    color: var(--danger-color, #dc3545);
+}
+
+.grade-max {
+    font-size: 1.5rem;
+    color: var(--text-tertiary);
+    margin-left: 0.25rem;
+}
+
+.grade-comment {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background-color: rgba(var(--primary-rgb), 0.05);
+    border-radius: 8px;
+    font-style: italic;
+    color: var(--text-secondary);
+    max-width: 350px;
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+}
+
+.grade-comment i {
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+}
+
+.no-grade {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(229, 231, 235, 0.5);
+    color: var(--text-tertiary);
+    gap: 0.5rem;
+    min-width: 200px;
+}
+
+.no-grade i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+
+.grades-list-container {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(229, 231, 235, 0.5);
+    overflow: hidden;
+    margin-bottom: 2rem;
+    padding: 1.75rem;
+}
+
+.grades-table-wrapper {
+    overflow-x: auto;
+}
+
+.grades-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0;
+}
+
+.grades-table thead th {
+    background-color: rgba(var(--primary-rgb), 0.05);
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: left;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.grades-table tbody tr {
+    transition: background-color 0.2s ease;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.grades-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.grades-table tbody tr:hover {
+    background-color: rgba(var(--primary-rgb), 0.02);
+}
+
+.grades-table tbody td {
+    padding: 1rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.grade-cell {
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.grade-cell.failing {
+    color: var(--danger-color, #dc3545);
+}
+
+.comment-cell {
+    max-width: 350px;
+    font-style: italic;
+}
+
+.empty-message {
+    padding: 2rem 1rem;
+    text-align: center;
+    color: var(--text-tertiary);
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.empty-message i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+
+.actions-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.btn-back {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    background-color: rgba(var(--secondary-rgb, 108, 117, 125), 0.1);
+    color: var(--text-secondary);
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-back:hover {
+    background-color: rgba(var(--secondary-rgb, 108, 117, 125), 0.15);
+    transform: translateY(-2px);
+    color: var(--text-primary);
+}
+
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+body.dark-mode-active .control-details-card,
+body.dark-mode-active .grade-display,
+body.dark-mode-active .no-grade,
+body.dark-mode-active .grades-list-container {
+    background-color: var(--dm-card-bg);
+    border-color: var(--dm-border-color);
+}
+
+body.dark-mode-active .dropdown-menu {
+    background-color: var(--dm-card-bg);
+    border-color: var(--dm-border-color);
+}
+
+body.dark-mode-active .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode-active .dropdown-item.text-danger:hover {
+    background-color: rgba(var(--danger-rgb, 220, 53, 69), 0.15);
+}
+
+body.dark-mode-active .btn-options {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--dm-text-secondary);
+}
+
+body.dark-mode-active .btn-options:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: var(--dm-text-primary);
+}
+
+body.dark-mode-active .detail-section,
+body.dark-mode-active .section-title,
+body.dark-mode-active .control-description {
+    border-color: var(--dm-border-color);
+}
+
+body.dark-mode-active .section-title,
+body.dark-mode-active .detail-value,
+body.dark-mode-active .description-title {
+    color: var(--dm-text-primary);
+}
+
+body.dark-mode-active .detail-label,
+body.dark-mode-active .student-name {
+    color: var(--dm-text-secondary);
+}
+
+body.dark-mode-active .grade-comment {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--dm-text-secondary);
+}
+
+body.dark-mode-active .grade-max {
+    color: var(--dm-text-tertiary);
+}
+
+body.dark-mode-active .stats-section {
+    background-color: rgba(var(--primary-rgb), 0.08);
+}
+
+body.dark-mode-active .stat-item {
+    background-color: var(--dm-card-bg);
+}
+
+body.dark-mode-active .grades-table thead th {
+    background-color: rgba(var(--primary-rgb), 0.1);
+    color: var(--dm-text-primary);
+    border-color: var(--dm-border-color);
+}
+
+body.dark-mode-active .grades-table tbody tr {
+    border-color: var(--dm-border-color);
+}
+
+body.dark-mode-active .grades-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+body.dark-mode-active .grades-table tbody td {
+    color: var(--dm-text-secondary);
+}
+
+body.dark-mode-active .grade-cell {
+    color: var(--dm-text-primary);
+}
+
+body.dark-mode-active .empty-message,
+body.dark-mode-active .no-grade {
+    color: var(--dm-text-tertiary);
+}
+
+body.dark-mode-active .btn-back {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--dm-text-secondary);
+}
+
+body.dark-mode-active .btn-back:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: var(--dm-text-primary);
+}
+
+
+@media (max-width: 992px) {
+    .detail-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .grade-value {
+        font-size: 3rem;
+    }
+    
+    .grades-table {
+        min-width: 650px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+    
+    .header-actions {
+        width: 100%;
+    }
+    
+    .btn-primary {
+        flex: 1;
+        justify-content: center;
+    }
+    
+    .detail-section, .stats-section, 
+    .student-grade-section, .grades-list-container {
+        padding: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .student-cell {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .detail-section, .stats-section, 
+    .student-grade-section, .grades-list-container {
+        padding: 1.25rem;
+    }
+    
+    .section-title {
+        font-size: 1.1rem;
+    }
+}
