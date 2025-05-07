@@ -132,6 +132,7 @@ database/
    ```bash
    git clone https://github.com/yassinefkh/moudeule2025.git
    cd moudeule2025
+   cd projetweb
    ```
 
 2. **Installer les dépendances**
